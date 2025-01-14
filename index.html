@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+  </head>
+  <style>
+    a-scene {
+      width: 100%;
+    }
+
+    .sliders {
+      height: 100px;
+      width: 100px;
+      background-color: red;  
+      display: flex;  
+      position: absolute;
+      z-index: 1000;
+    }
+  </style>
+  <body>
+    <div class="sliders">
+      <input type="range" min="0.0" max="25.0" value="0" class="slider" id="slider1">
+    </div>
+    <a-scene>
+      <a-camera position="0 1.6 0">
+        <a-cursor></a-cursor>
+      </a-camera>
+
+      <a-box position="1 0.4 -4" rotation="" color="#4CC3D9" shadow="" scale="0.05 0.8 2" id="wall1"></a-box>
+      <a-box position="-1 0.4 -4" rotation="" color="#4CC3D9" shadow="" scale="0.05 0.8 2" id="wall2"></a-box>
+      <a-box position="0 0.4 -3" rotation="0 90 0" color="#4CC3D9" shadow="" scale="0.05 0.8 2.05" id="wall3"></a-box>
+      <a-box position="0 0.4 -5" rotation="0 90 0" color="#4CC3D9" shadow="" scale="0.05 0.8 2.05" id="wall4"></a-box>
+      <a-box position="0 0.4 -5" rotation="0 90 0" color="#4CC3D9" shadow="" scale="0.05 0.8 2.05" id="wall4"></a-box>
+      <a-box position="0 0.8 -4" rotation="0 90 0" color="#4CC3D9" shadow="" scale="2.05 0.05 2.05" id="roof1"></a-box>
+
+
+      <a-entity id="door3" position="0 0 0">
+        <a-box 
+          position="0.025 0.25 -2.995" 
+          rotation="0 90 0" 
+          color="#4CC3D9" 
+          shadow="" 
+          scale="0.05 0.5 0.3" 
+          id="door" 
+          material="color: #7d7d7d"
+          rotationDirection="-">
+        </a-box>
+      </a-entity>
+      
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+  </body>
+
+  <script src="script.js?v=<?php echo filemtime('script.js') ?>"></script>
+</html>
